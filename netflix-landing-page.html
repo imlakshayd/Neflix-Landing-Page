@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.deviantart.com%2Flogofeveryt%2Fart%2FThe-Netflix-Login-Background-Canada-2024-1029429319&psig=AOvVaw3f0mUAgLm6smkUJa5Uyp8s&ust=1720654197215000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKjwicOOm4cDFQAAAAAdAAAAABAE);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+           z-index: 1;
+
+        }
+        .logo {
+            color: #e50914;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .form-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        input[type="email"] {
+            padding: 15px;
+            width: 450px;
+            font-size: 1em;
+        }
+        button {
+            padding: 15px 30px;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .disclaimer {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .sign-in {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 7px 17px;
+            background-color: #e50914;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="sign-in">Sign In</a>
+    <div class="container">
+        <div class="logo">NETFLIX</div>
+        <h1>Unlimited movies, TV shows, and more.</h1>
+        <p>Watch anywhere. Cancel anytime.</p>
+        <p>Ready to watch? Enter your email to create or restart your membership.</p>
+        <div class="form-container">
+            <input type="email" placeholder="Email address">
+            <button onclick="tryFree()">TRY 30 DAYS FREE ></button>
+        </div>
+        <p class="disclaimer">Only new members are eligible for this offer.</p>
+    </div>
+
+    <script>
+        function tryFree() {
+            const email = document.querySelector('input[type="email"]').value;
+            if (email) {
+                alert('Thank you for signing up! A confirmation email has been sent to ' + email);
+            } else {
+                alert('Please enter a valid email address.');
+            }
+        }
+    </script>
+</body>
+</html>
